@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karachi Home Price Prediction</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>Area (Square Feet)</h2>
+        <input type="text" id="uiSqft" value="1000">
+
+        <h2>BHK</h2>
+        <div class="switch-field" id="bhkField">
+            <input type="radio" id="bhk1" name="uiBHK" value="1">
+            <label for="bhk1">1</label>
+
+            <input type="radio" id="bhk2" name="uiBHK" value="2" checked>
+            <label for="bhk2">2</label>
+
+            <input type="radio" id="bhk3" name="uiBHK" value="3">
+            <label for="bhk3">3</label>
+
+            <input type="radio" id="bhk4" name="uiBHK" value="4">
+            <label for="bhk4">4</label>
+
+            <input type="radio" id="bhk5" name="uiBHK" value="5">
+            <label for="bhk5">5</label>
+        </div>
+
+        <h2>Bath</h2>
+        <div class="switch-field" id="bathField">
+            <input type="radio" id="bath1" name="uiBathrooms" value="1">
+            <label for="bath1">1</label>
+
+            <input type="radio" id="bath2" name="uiBathrooms" value="2" checked>
+            <label for="bath2">2</label>
+
+            <input type="radio" id="bath3" name="uiBathrooms" value="3">
+            <label for="bath3">3</label>
+
+            <input type="radio" id="bath4" name="uiBathrooms" value="4">
+            <label for="bath4">4</label>
+
+            <input type="radio" id="bath5" name="uiBathrooms" value="5">
+            <label for="bath5">5</label>
+        </div>
+
+        <h2>Location</h2>
+        <select id="uiLocations">
+            <option value="" disabled selected>Loading...</option>
+        </select>
+
+        <button onclick="onClickedEstimatePrice()">Estimate Price</button>
+
+        <div class="loader" id="loadingSpinner"></div>
+
+        <div id="uiEstimatedPrice"></div>
+    </div>
+
+</body>
+
+</html>

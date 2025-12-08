@@ -1,0 +1,51 @@
+name: Karachi House Price Prediction
+description: >
+  A complete ML + Flask + JS app for predicting Karachi house prices with a modern UI and animations.
+version: 1.0.0
+author: "Faiz Ur Rehman Ashrafi"
+license: MIT
+
+directories:
+  client:
+    - app.html
+    - app.css
+    - app.js
+
+  model:
+    - columns.json
+    - karachi_home_prices_model.pickle
+
+  server:
+    - server.py
+    - util.py
+    - artifacts/
+      - columns.json
+      - karachi_home_prices_model.pickle
+
+api_endpoints:
+  get_locations: "http://127.0.0.1:5000/get_location_names"
+  predict_price: "http://127.0.0.1:5000/predict_home_price"
+
+environment:
+  python: "3.10+"
+  dependencies:
+    - flask
+    - pandas
+    - numpy
+    - scikit-learn
+
+run:
+  server:
+    command: "python server/server.py"
+
+ui:
+  features:
+    - modern card layout
+    - loading spinner
+    - smooth animations
+    - error handling
+    - updated background
+
+notes:
+  - Model and columns stored in both /model and /server/artifacts
+  - Frontend directly calls Flask local API
