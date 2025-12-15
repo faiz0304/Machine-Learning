@@ -1,0 +1,8 @@
+numpy
+opencv-python
+PyWavelets
+scikit-learn
+joblib
+flask
+pillow
+matplotlib

@@ -1,0 +1,61 @@
+GUIDED SETUP – OpenCV & Python Version FIX (Windows)
+
+Problem Summary: - Python 3.14 is too new for NumPy/OpenCV - pip tries
+to build NumPy from source - Build fails due to old GCC - Solution: Use
+Python 3.10 with virtual environment
+
+  ----------------------------------
+  CHECK INSTALLED PYTHON VERSIONS
+  ----------------------------------
+  Command: py -0
+
+  Expected: Python 3.10 (64-bit)
+  should be available
+  ----------------------------------
+
+PROJECT SETUP (RECOMMENDED)
+
+1)  Go to project folder: cd D:_Learning_Codebasics_Recognition
+
+2)  Create virtual environment with Python 3.10: py -3.10 -m venv venv
+
+3)  Activate virtual environment: venv
+
+4)  Verify Python version: python –version Expected: Python 3.10.x
+
+  ----------------------
+  INSTALL DEPENDENCIES
+  ----------------------
+
+5)  Upgrade pip: python -m pip install –upgrade pip
+
+6)  Install OpenCV: pip install opencv-python
+
+  -------------------
+  TEST INSTALLATION
+  -------------------
+
+Run Python and test: import cv2 import numpy as np
+
+print(cv2.__version__) print(np.__version__)
+
+  ----------------------------------
+  IMPORTANT RULES
+  ----------------------------------
+  - Always activate venv before
+  installing packages - Do NOT use
+  Python 3.14 for ML projects -
+  Preferred versions: Python 3.10 or
+  3.11 - One venv per project
+
+  ----------------------------------
+
+COMMON MISTAKES
+
+-   Installing packages globally
+-   Using latest Python blindly
+-   Ignoring virtual environments
+
+  --------------
+  END OF GUIDE
+  --------------
